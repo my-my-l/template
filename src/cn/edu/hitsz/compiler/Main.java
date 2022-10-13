@@ -34,15 +34,15 @@ public class Main {
         final var tokens = lexer.getTokens();
         symbolTable.dumpTable(FilePathConfig.OLD_SYMBOL_TABLE);
 
-        // 读取第三方程序构造的 LR 分析表
-        final var tableLoader = new TableLoader();
-        final var lrTable = tableLoader.load(FilePathConfig.LR1_TABLE_PATH);
+//        // 读取第三方程序构造的 LR 分析表
+//        final var tableLoader = new TableLoader();
+//        final var lrTable = tableLoader.load(FilePathConfig.LR1_TABLE_PATH);
 
-//         // 或使用框架自带部分直接从 grammar.txt 构造 LR 分析表
-//         final var tableGenerator = new TableGenerator();
-//         tableGenerator.run();
-//         final var lrTable = tableGenerator.getTable();
-//         lrTable.dumpTable("data/out/lrTable.csv");
+         // 或使用框架自带部分直接从 grammar.txt 构造 LR 分析表
+         final var tableGenerator = new TableGenerator();
+         tableGenerator.run();
+         final var lrTable = tableGenerator.getTable();
+         lrTable.dumpTable("data/out/lrTable.csv");
 
         // 加载 LR 分析驱动程序
         final var parser = new SyntaxAnalyzer(symbolTable);
