@@ -99,6 +99,7 @@ public class SyntaxAnalyzer {
             action = statusStack.getFirst().getAction(tokenStack.getFirst());
             switch (action.getKind()) {
                 case Shift : {
+                    System.out.println("shift");
                     final var shiftTo = action.getStatus();
                     callWhenInShift(statusStack.getFirst(),tokenStack.getFirst());
                     //压入新状态
@@ -111,6 +112,7 @@ public class SyntaxAnalyzer {
                 }
 
                 case Reduce : {
+                    System.out.println("reduce");
                     final var production = action.getProduction();
                     callWhenInReduce(statusStack.getFirst(),production);
                     //按space分解产生式
@@ -132,12 +134,14 @@ public class SyntaxAnalyzer {
                 }
 
                 case Accept : {
+                    System.out.println("accept");
                     callWhenInAccept(statusStack.getFirst());
                     acc = true;
                     break;
                 }
 
                 case Error : {
+                    System.out.println("error");
                     break;
                 }
                 default :

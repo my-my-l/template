@@ -101,6 +101,9 @@ public class LexicalAnalyzer {
                     case '-' -> tokens.add(Token.simple("-"));
                     case '/' -> tokens.add(Token.simple("/"));
                     case ',' -> tokens.add(Token.simple(","));
+                    case '?' -> tokens.add(Token.simple("?"));
+                    case '&' -> tokens.add(Token.simple("&"));
+                    case '!' -> tokens.add(Token.simple("!"));
                     case ';' -> tokens.add(Token.simple("Semicolon"));
                     default -> System.out.println("出错啦>.<");
                 }

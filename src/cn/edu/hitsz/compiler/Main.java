@@ -9,6 +9,7 @@ import cn.edu.hitsz.compiler.parser.SemanticAnalyzer;
 import cn.edu.hitsz.compiler.parser.SyntaxAnalyzer;
 import cn.edu.hitsz.compiler.parser.table.GrammarInfo;
 import cn.edu.hitsz.compiler.parser.table.Symbol;
+import cn.edu.hitsz.compiler.parser.table.TableGenerator;
 import cn.edu.hitsz.compiler.parser.table.TableLoader;
 import cn.edu.hitsz.compiler.symtab.SymbolTable;
 import cn.edu.hitsz.compiler.utils.FilePathConfig;
@@ -37,11 +38,11 @@ public class Main {
         final var tableLoader = new TableLoader();
         final var lrTable = tableLoader.load(FilePathConfig.LR1_TABLE_PATH);
 
-        // // 或使用框架自带部分直接从 grammar.txt 构造 LR 分析表
-        // final var tableGenerator = new TableGenerator();
-        // tableGenerator.run();
-        // final var lrTable = tableGenerator.getTable();
-        // lrTable.dumpTable("data/out/lrTable.csv");
+//         // 或使用框架自带部分直接从 grammar.txt 构造 LR 分析表
+//         final var tableGenerator = new TableGenerator();
+//         tableGenerator.run();
+//         final var lrTable = tableGenerator.getTable();
+//         lrTable.dumpTable("data/out/lrTable.csv");
 
         // 加载 LR 分析驱动程序
         final var parser = new SyntaxAnalyzer(symbolTable);
@@ -60,6 +61,7 @@ public class Main {
         final var irGenerator = new IRGenerator();
         parser.registerObserver(irGenerator);
         // 执行语法解析并在解析过程中依次调用各 Observer
+        System.out.println("hhhhhhh");
         parser.run();
         // 各 Observer 输出结果
         productionCollector.dumpToFile(FilePathConfig.PARSER_PATH);
