@@ -73,6 +73,10 @@ public class LexicalAnalyzer {
                 if("int".equals(newStr)){tokens.add(Token.simple("int"));}
                 //return
                 else if("return".equals(newStr)){tokens.add(Token.simple("return"));}
+                //and
+                else if("and".equals(newStr)){tokens.add(Token.simple("and"));}
+                //or
+                else if("or".equals(newStr)){tokens.add(Token.simple("or"));}
                 //变量名称
                 else{
                     tokens.add(Token.normal("id",newStr));
@@ -93,7 +97,16 @@ public class LexicalAnalyzer {
             else {
                 switch (characters.get(i)) {
                     case '*' -> tokens.add(Token.simple("*"));
-                    case '=' -> tokens.add(Token.simple("="));
+                    case '%' -> tokens.add(Token.simple("%"));
+                    case '=' -> {
+                        if(characters.get(i+1)=='='){
+                            tokens.add(Token.simple("=="));
+                            i++;
+                        }
+                        else {
+                            tokens.add(Token.simple("="));
+                        }
+                    }
                     case '(' -> tokens.add(Token.simple("("));
                     case ')' -> tokens.add(Token.simple(")"));
                     case ':' -> tokens.add(Token.simple(":"));
@@ -103,7 +116,42 @@ public class LexicalAnalyzer {
                     case ',' -> tokens.add(Token.simple(","));
                     case '?' -> tokens.add(Token.simple("?"));
                     case '&' -> tokens.add(Token.simple("&"));
-                    case '!' -> tokens.add(Token.simple("!"));
+                    case '^' -> tokens.add(Token.simple("^"));
+                    case '!' -> {
+                        if(characters.get(i+1)=='='){
+                            tokens.add(Token.simple("!="));
+                            i++;
+                        }
+                        else {
+                            tokens.add(Token.simple("!"));
+                        }
+                    }
+                    case '>' -> {
+                        if(characters.get(i+1)=='='){
+                            tokens.add(Token.simple(">="));
+                            i++;
+                        }
+                        else if(characters.get(i+1)=='>'){
+                            tokens.add(Token.simple(">>"));
+                            i++;
+                        }
+                        else{
+                            tokens.add(Token.simple(">"));
+                        }
+                    }
+                    case '<' -> {
+                        if(characters.get(i+1)=='='){
+                            tokens.add(Token.simple("<="));
+                            i++;
+                        }
+                        else if(characters.get(i+1)=='<'){
+                            tokens.add(Token.simple("<<"));
+                            i++;
+                        }
+                        else {
+                            tokens.add(Token.simple("<"));
+                        }
+                    }
                     case ';' -> tokens.add(Token.simple("Semicolon"));
                     default -> System.out.println("出错啦>.<");
                 }

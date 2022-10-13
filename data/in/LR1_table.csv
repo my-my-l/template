@@ -1,90 +1,872 @@
-״̬,ACTION,,,,,,,,,,,,,,,GOTO,,,,,,,
-,id,int,*,+,-,=,(,),Semicolon,IntConst,return,?,:,&,$,E,S,S_list,D,A,B,T,L
-0,shift 4,shift 5,,,,,,,,,shift 6,,,,,,1,2,3,,,,
-1,,,,,,,,,shift 7,,,,,,,,,,,,,,
-2,,,,,,,,,,,,,,,accept,,,,,,,,
-3,shift 8,,,,,,,,,,,,,,,,,,,,,,
-4,,,,,,shift 9,,,,,,,,,,,,,,,,,
-5,reduce D -> int,,,,,,,,,,,,,,,,,,,,,,
-6,shift 13,,,,,,shift 14,,,shift 15,,,,,,10,,,,11,12,,
-7,shift 4,shift 5,,,,,,,,,shift 6,,,,reduce S_list -> S Semicolon,,1,16,3,,,,
-8,,,,,,,,,reduce S -> D id,,,,,,,,,,,,,,
-9,shift 22,,,,,,shift 23,,,shift 24,,,,,,17,,,,18,19,20,21
-10,,,,shift 25,shift 26,,,,reduce S -> return E,,,,,,,,,,,,,,
-11,,,shift 27,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,,,,,,,,,,
-12,,,reduce A -> B,reduce A -> B,reduce A -> B,,,,reduce A -> B,,,,,,,,,,,,,,
-13,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,,,,,,,,,,
-14,shift 31,,,,,,shift 32,,,shift 33,,,,,,28,,,,29,30,,
-15,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,,,,,,,,,,
-16,,,,,,,,,,,,,,,reduce S_list -> S Semicolon S_list,,,,,,,,
-17,,,,shift 34,shift 35,,,,reduce S -> id = E,,,,,shift 36,,,,,,,,,
-18,,,shift 37,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,,,,,,,,,
-19,,,reduce A -> B,reduce A -> B,reduce A -> B,,,,reduce A -> B,,,,,reduce A -> B,,,,,,,,,
-20,,,,,,,,,reduce S -> id = T,,,,,,,,,,,,,,
-21,,,,,,,,,,,,shift 38,,shift 39,,,,,,,,,
-22,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,,,,,,,,,
-23,shift 31,,,,,,shift 32,,,shift 33,,,,,,40,,,,29,30,,
-24,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,,,,,,,,,
-25,shift 13,,,,,,shift 14,,,shift 15,,,,,,,,,,41,12,,
-26,shift 13,,,,,,shift 14,,,shift 15,,,,,,,,,,42,12,,
-27,shift 13,,,,,,shift 14,,,shift 15,,,,,,,,,,,43,,
-28,,,,shift 44,shift 45,,,shift 46,,,,,,,,,,,,,,,
-29,,,shift 47,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,,,,,,,,,,
-30,,,reduce A -> B,reduce A -> B,reduce A -> B,,,reduce A -> B,,,,,,,,,,,,,,,
-31,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,,,,,,,,,,
-32,shift 31,,,,,,shift 32,,,shift 33,,,,,,48,,,,29,30,,
-33,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,,,,,,,,,,
-34,shift 22,,,,,,shift 23,,,shift 24,,,,,,,,,,49,19,,
-35,shift 22,,,,,,shift 23,,,shift 24,,,,,,,,,,50,19,,
-36,shift 54,,,,,,shift 55,,,shift 56,,,,,,51,,,,52,53,,
-37,shift 22,,,,,,shift 23,,,shift 24,,,,,,,,,,,57,,
-38,shift 61,,,,,,shift 62,,,shift 63,,,,,,58,,,,59,60,,
-39,shift 54,,,,,,shift 55,,,shift 56,,,,,,64,,,,52,53,,
-40,,,,shift 44,shift 45,,,shift 65,,,,,,,,,,,,,,,
-41,,,shift 27,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,,,,,,,,,,
-42,,,shift 27,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,,,,,,,,,,
-43,,,reduce A -> A * B,reduce A -> A * B,reduce A -> A * B,,,,reduce A -> A * B,,,,,,,,,,,,,,
-44,shift 31,,,,,,shift 32,,,shift 33,,,,,,,,,,66,30,,
-45,shift 31,,,,,,shift 32,,,shift 33,,,,,,,,,,67,30,,
-46,,,reduce B -> ( E ),reduce B -> ( E ),reduce B -> ( E ),,,,reduce B -> ( E ),,,,,,,,,,,,,,
-47,shift 31,,,,,,shift 32,,,shift 33,,,,,,,,,,,68,,
-48,,,,shift 44,shift 45,,,shift 69,,,,,,,,,,,,,,,
-49,,,shift 37,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,,,,,,,,,
-50,,,shift 37,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,,,,,,,,,
-51,,,,shift 70,shift 71,,,,,,,reduce L -> E & E,,reduce L -> E & E,,,,,,,,,
-52,,,shift 72,reduce E -> A,reduce E -> A,,,,,,,reduce E -> A,,reduce E -> A,,,,,,,,,
-53,,,reduce A -> B,reduce A -> B,reduce A -> B,,,,,,,reduce A -> B,,reduce A -> B,,,,,,,,,
-54,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,,reduce B -> id,,,,,,,,,
-55,shift 31,,,,,,shift 32,,,shift 33,,,,,,73,,,,29,30,,
-56,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,,reduce B -> IntConst,,,,,,,,,
-57,,,reduce A -> A * B,reduce A -> A * B,reduce A -> A * B,,,,reduce A -> A * B,,,,,reduce A -> A * B,,,,,,,,,
-58,,,,shift 74,shift 75,,,,,,,,shift 76,,,,,,,,,,
-59,,,shift 77,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,,,,,,,,,,
-60,,,reduce A -> B,reduce A -> B,reduce A -> B,,,,,,,,reduce A -> B,,,,,,,,,,
-61,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,,,,,,,,,,
-62,shift 31,,,,,,shift 32,,,shift 33,,,,,,78,,,,29,30,,
-63,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,,,,,,,,,,
-64,,,,shift 70,shift 71,,,,,,,reduce L -> L & E,,reduce L -> L & E,,,,,,,,,
-65,,,reduce B -> ( E ),reduce B -> ( E ),reduce B -> ( E ),,,,reduce B -> ( E ),,,,,reduce B -> ( E ),,,,,,,,,
-66,,,shift 47,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,,,,,,,,,,
-67,,,shift 47,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,,,,,,,,,,
-68,,,reduce A -> A * B,reduce A -> A * B,reduce A -> A * B,,,reduce A -> A * B,,,,,,,,,,,,,,,
-69,,,reduce B -> ( E ),reduce B -> ( E ),reduce B -> ( E ),,,reduce B -> ( E ),,,,,,,,,,,,,,,
-70,shift 54,,,,,,shift 55,,,shift 56,,,,,,,,,,79,53,,
-71,shift 54,,,,,,shift 55,,,shift 56,,,,,,,,,,80,53,,
-72,shift 54,,,,,,shift 55,,,shift 56,,,,,,,,,,,81,,
-73,,,,shift 44,shift 45,,,shift 82,,,,,,,,,,,,,,,
-74,shift 61,,,,,,shift 62,,,shift 63,,,,,,,,,,83,60,,
-75,shift 61,,,,,,shift 62,,,shift 63,,,,,,,,,,84,60,,
-76,shift 13,,,,,,shift 14,,,shift 15,,,,,,85,,,,11,12,,
-77,shift 61,,,,,,shift 62,,,shift 63,,,,,,,,,,,86,,
-78,,,,shift 44,shift 45,,,shift 87,,,,,,,,,,,,,,,
-79,,,shift 72,reduce E -> E + A,reduce E -> E + A,,,,,,,reduce E -> E + A,,reduce E -> E + A,,,,,,,,,
-80,,,shift 72,reduce E -> E - A,reduce E -> E - A,,,,,,,reduce E -> E - A,,reduce E -> E - A,,,,,,,,,
-81,,,reduce A -> A * B,reduce A -> A * B,reduce A -> A * B,,,,,,,reduce A -> A * B,,reduce A -> A * B,,,,,,,,,
-82,,,reduce B -> ( E ),reduce B -> ( E ),reduce B -> ( E ),,,,,,,reduce B -> ( E ),,reduce B -> ( E ),,,,,,,,,
-83,,,shift 77,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,,,,,,,,,,
-84,,,shift 77,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,,,,,,,,,,
-85,,,,shift 25,shift 26,,,,reduce T -> L ? E : E,,,,,,,,,,,,,,
-86,,,reduce A -> A * B,reduce A -> A * B,reduce A -> A * B,,,,,,,,reduce A -> A * B,,,,,,,,,,
-87,,,reduce B -> ( E ),reduce B -> ( E ),reduce B -> ( E ),,,,,,,,reduce B -> ( E ),,,,,,,,,,
+״̬,ACTION,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GOTO,,,,,,,,,,,,
+,id,int,*,+,-,=,(,),Semicolon,IntConst,return,?,:,&,^,and,or,==,!=,>,>=,<,<=,<<,>>,/,%,!,$,E,S,S_list,D,A,B,T,L_1,L_2,equal,compare,shift,not
+0,shift 4,shift 5,,,,,,,,,shift 6,,,,,,,,,,,,,,,,,,,,1,2,3,,,,,,,,,
+1,,,,,,,,,shift 7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,accept,,,,,,,,,,,,,
+3,shift 8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,,,,,,shift 9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5,reduce D -> int,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,13,14,15,16,17,18,19
+7,shift 4,shift 5,,,,,,,,,shift 6,,,,,,,,,,,,,,,,,,reduce S_list -> S Semicolon,,1,24,3,,,,,,,,,
+8,,,,,,,,,reduce S -> D id,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,25,14,15,16,17,18,19
+10,,,,shift 26,shift 27,,,,reduce shift -> E,,,reduce shift -> E,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 28,shift 29,,,,,,,,,,,,,,,,,
+11,,,shift 30,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 31,shift 32,,,,,,,,,,,,,,,
+12,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+13,,,,,,,,,reduce S -> return T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,,,,,,,,,reduce T -> L_1,,,shift 33,,,,shift 34,shift 35,,,,,,,,,,,,,,,,,,,,,,,,,
+15,,,,,,,,,reduce L_1 -> L_2,,,reduce L_1 -> L_2,,shift 36,shift 37,reduce L_1 -> L_2,reduce L_1 -> L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+16,,,,,,,,,reduce L_2 -> equal,,,reduce L_2 -> equal,,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,,,,,,,,,,,,,,,,,,,,,,,,,
+17,,,,,,,,,reduce equal -> compare,,,reduce equal -> compare,,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,shift 38,shift 39,,,,,,,,,,,,,,,,,,,,,,,
+18,,,,,,,,,reduce compare -> shift,,,reduce compare -> shift,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,shift 40,shift 41,shift 42,shift 43,,,,,,,,,,,,,,,,,,,
+19,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+20,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+21,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,47,48,49,50,51,52
+22,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+23,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,,,,,,,,57,,,,,,,
+24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,reduce S_list -> S Semicolon S_list,,,,,,,,,,,,,
+25,,,,,,,,,reduce S -> id = T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+26,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,,,,,58,12,,,,,,,19
+27,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,,,,,59,12,,,,,,,19
+28,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,60,,,,61,62,,,,,,,63
+29,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,68,,,,61,62,,,,,,,63
+30,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,,,,,,12,,,,,,,69
+31,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,,,,,,12,,,,,,,70
+32,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,,,,,,12,,,,,,,71
+33,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,72,,,,73,74,,75,76,77,78,79,80
+34,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,,,85,16,17,18,19
+35,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,,,86,16,17,18,19
+36,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,,,,87,17,18,19
+37,shift 20,,,,,,shift 21,,,shift 22,,,,,,,,,,,,,,,,,,shift 23,,10,,,,11,12,,,,88,17,18,19
+38,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,89,,,,90,91,,,,,92,93,94
+39,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,89,,,,90,91,,,,,99,93,94
+40,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,100,,,,101,102,,,,,,103,104
+41,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,100,,,,101,102,,,,,,109,104
+42,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,100,,,,101,102,,,,,,110,104
+43,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,100,,,,101,102,,,,,,111,104
+44,,,,shift 112,shift 113,,,reduce shift -> E,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 114,shift 115,,,,,,,,,,,,,,,,,
+45,,,shift 116,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 117,shift 118,,,,,,,,,,,,,,,
+46,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+47,,,,,,,,shift 119,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+48,,,,,,,,reduce L_1 -> L_2,,,,,,shift 122,shift 123,reduce L_1 -> L_2,reduce L_1 -> L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+49,,,,,,,,reduce L_2 -> equal,,,,,,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,,,,,,,,,,,,,,,,,,,,,,,,,
+50,,,,,,,,reduce equal -> compare,,,,,,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,shift 124,shift 125,,,,,,,,,,,,,,,,,,,,,,,
+51,,,,,,,,reduce compare -> shift,,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,shift 126,shift 127,shift 128,shift 129,,,,,,,,,,,,,,,,,,,
+52,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+53,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+54,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,130,48,49,50,51,52
+55,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+56,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,,,,,,,,131,,,,,,,
+57,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+58,,,shift 30,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 31,shift 32,,,,,,,,,,,,,,,
+59,,,shift 30,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 31,shift 32,,,,,,,,,,,,,,,
+60,,,,shift 132,shift 133,,,,reduce shift -> E << E,,,reduce shift -> E << E,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+61,,,shift 134,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 135,shift 136,,,,,,,,,,,,,,,
+62,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+63,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+64,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+65,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,137,48,49,50,51,52
+66,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+67,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,,,,,,,,138,,,,,,,
+68,,,,shift 132,shift 133,,,,reduce shift -> E >> E,,,reduce shift -> E >> E,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+69,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+70,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+71,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+72,,,,shift 139,shift 140,,,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 141,shift 142,,,,,,,,,,,,,,,,,
+73,,,shift 143,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 144,shift 145,,,,,,,,,,,,,,,
+74,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+75,,,,,,,,,,,,,shift 146,,,shift 147,shift 148,,,,,,,,,,,,,,,,,,,,,,,,,
+76,,,,,,,,,,,,,reduce L_1 -> L_2,shift 149,shift 150,reduce L_1 -> L_2,reduce L_1 -> L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+77,,,,,,,,,,,,,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,,,,,,,,,,,,,,,,,,,,,,,,,
+78,,,,,,,,,,,,,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,shift 151,shift 152,,,,,,,,,,,,,,,,,,,,,,,
+79,,,,,,,,,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,shift 153,shift 154,shift 155,shift 156,,,,,,,,,,,,,,,,,,,
+80,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+81,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+82,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,157,48,49,50,51,52
+83,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+84,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,,,,,,,,158,,,,,,,
+85,,,,,,,,,reduce L_1 -> L_1 and L_2,,,reduce L_1 -> L_1 and L_2,,shift 36,shift 37,reduce L_1 -> L_1 and L_2,reduce L_1 -> L_1 and L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+86,,,,,,,,,reduce L_1 -> L_1 or L_2,,,reduce L_1 -> L_1 or L_2,,shift 36,shift 37,reduce L_1 -> L_1 or L_2,reduce L_1 -> L_1 or L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+87,,,,,,,,,reduce L_2 -> L_2 & equal,,,reduce L_2 -> L_2 & equal,,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,,,,,,,,,,,,,,,,,,,,,,,,,
+88,,,,,,,,,reduce L_2 -> L_2 ^ equal,,,reduce L_2 -> L_2 ^ equal,,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,,,,,,,,,,,,,,,,,,,,,,,,,
+89,,,,shift 159,shift 160,,,,reduce shift -> E,,,reduce shift -> E,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 161,shift 162,,,,,,,,,,,,,,,,,
+90,,,shift 163,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 164,shift 165,,,,,,,,,,,,,,,
+91,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+92,,,,,,,,,reduce equal -> compare == compare,,,reduce equal -> compare == compare,,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,,,,,,,,,,,,,,,,,,,,,,,,,
+93,,,,,,,,,reduce compare -> shift,,,reduce compare -> shift,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,,,shift 166,shift 167,shift 168,shift 169,,,,,,,,,,,,,,,,,,,
+94,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+95,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+96,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,170,48,49,50,51,52
+97,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+98,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,,,,,,,,171,,,,,,,
+99,,,,,,,,,reduce equal -> compare != compare,,,reduce equal -> compare != compare,,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,,,,,,,,,,,,,,,,,,,,,,,,,
+100,,,,shift 172,shift 173,,,,reduce shift -> E,,,reduce shift -> E,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,shift 174,shift 175,,,,,,,,,,,,,,,,,
+101,,,shift 176,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,reduce E -> A,reduce E -> A,shift 177,shift 178,,,,,,,,,,,,,,,
+102,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+103,,,,,,,,,reduce compare -> shift > shift,,,reduce compare -> shift > shift,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,
+104,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+105,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+106,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,179,48,49,50,51,52
+107,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+108,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,,,,,,,,180,,,,,,,
+109,,,,,,,,,reduce compare -> shift >= shift,,,reduce compare -> shift >= shift,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,
+110,,,,,,,,,reduce compare -> shift < shift,,,reduce compare -> shift < shift,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,
+111,,,,,,,,,reduce compare -> shift <= shift,,,reduce compare -> shift <= shift,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,
+112,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,,,,,181,46,,,,,,,52
+113,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,,,,,182,46,,,,,,,52
+114,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,183,,,,184,185,,,,,,,186
+115,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,191,,,,184,185,,,,,,,186
+116,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,,,,,,46,,,,,,,192
+117,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,,,,,,46,,,,,,,193
+118,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,,,,,,46,,,,,,,194
+119,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+120,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,,195,49,50,51,52
+121,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,,196,49,50,51,52
+122,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,,,197,50,51,52
+123,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,,,198,50,51,52
+124,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,199,,,,200,201,,,,,202,203,204
+125,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,199,,,,200,201,,,,,209,203,204
+126,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,210,,,,211,212,,,,,,213,214
+127,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,210,,,,211,212,,,,,,219,214
+128,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,210,,,,211,212,,,,,,220,214
+129,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,210,,,,211,212,,,,,,221,214
+130,,,,,,,,shift 222,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+131,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+132,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,,,,,223,62,,,,,,,63
+133,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,,,,,224,62,,,,,,,63
+134,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,,,,,,62,,,,,,,225
+135,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,,,,,,62,,,,,,,226
+136,shift 64,,,,,,shift 65,,,shift 66,,,,,,,,,,,,,,,,,,shift 67,,,,,,,62,,,,,,,227
+137,,,,,,,,shift 228,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+138,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+139,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,,,,,229,74,,,,,,,80
+140,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,,,,,230,74,,,,,,,80
+141,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,231,,,,232,233,,,,,,,234
+142,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,239,,,,232,233,,,,,,,234
+143,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,,,,,,74,,,,,,,240
+144,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,,,,,,74,,,,,,,241
+145,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,,,,,,74,,,,,,,242
+146,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,243,,,,244,245,,246,247,248,249,250,251
+147,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,72,,,,73,74,,,256,77,78,79,80
+148,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,72,,,,73,74,,,257,77,78,79,80
+149,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,72,,,,73,74,,,,258,78,79,80
+150,shift 81,,,,,,shift 82,,,shift 83,,,,,,,,,,,,,,,,,,shift 84,,72,,,,73,74,,,,259,78,79,80
+151,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,260,,,,261,262,,,,,263,264,265
+152,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,260,,,,261,262,,,,,270,264,265
+153,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,271,,,,272,273,,,,,,274,275
+154,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,271,,,,272,273,,,,,,280,275
+155,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,271,,,,272,273,,,,,,281,275
+156,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,271,,,,272,273,,,,,,282,275
+157,,,,,,,,shift 283,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+158,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+159,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,,,,,284,91,,,,,,,94
+160,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,,,,,285,91,,,,,,,94
+161,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,286,,,,287,288,,,,,,,289
+162,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,294,,,,287,288,,,,,,,289
+163,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,,,,,,91,,,,,,,295
+164,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,,,,,,91,,,,,,,296
+165,shift 95,,,,,,shift 96,,,shift 97,,,,,,,,,,,,,,,,,,shift 98,,,,,,,91,,,,,,,297
+166,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,298,,,,299,300,,,,,,301,302
+167,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,298,,,,299,300,,,,,,307,302
+168,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,298,,,,299,300,,,,,,308,302
+169,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,298,,,,299,300,,,,,,309,302
+170,,,,,,,,shift 310,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+171,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+172,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,,,,,311,102,,,,,,,104
+173,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,,,,,312,102,,,,,,,104
+174,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,313,,,,314,315,,,,,,,316
+175,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,321,,,,314,315,,,,,,,316
+176,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,,,,,,102,,,,,,,322
+177,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,,,,,,102,,,,,,,323
+178,shift 105,,,,,,shift 106,,,shift 107,,,,,,,,,,,,,,,,,,shift 108,,,,,,,102,,,,,,,324
+179,,,,,,,,shift 325,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+180,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+181,,,shift 116,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 117,shift 118,,,,,,,,,,,,,,,
+182,,,shift 116,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 117,shift 118,,,,,,,,,,,,,,,
+183,,,,shift 326,shift 327,,,reduce shift -> E << E,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+184,,,shift 328,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 329,shift 330,,,,,,,,,,,,,,,
+185,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+186,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+187,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+188,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,331,48,49,50,51,52
+189,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+190,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,,,,,,,,332,,,,,,,
+191,,,,shift 326,shift 327,,,reduce shift -> E >> E,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+192,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+193,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+194,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+195,,,,,,,,reduce L_1 -> L_1 and L_2,,,,,,shift 122,shift 123,reduce L_1 -> L_1 and L_2,reduce L_1 -> L_1 and L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+196,,,,,,,,reduce L_1 -> L_1 or L_2,,,,,,shift 122,shift 123,reduce L_1 -> L_1 or L_2,reduce L_1 -> L_1 or L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+197,,,,,,,,reduce L_2 -> L_2 & equal,,,,,,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,,,,,,,,,,,,,,,,,,,,,,,,,
+198,,,,,,,,reduce L_2 -> L_2 ^ equal,,,,,,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,,,,,,,,,,,,,,,,,,,,,,,,,
+199,,,,shift 333,shift 334,,,reduce shift -> E,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 335,shift 336,,,,,,,,,,,,,,,,,
+200,,,shift 337,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 338,shift 339,,,,,,,,,,,,,,,
+201,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+202,,,,,,,,reduce equal -> compare == compare,,,,,,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,,,,,,,,,,,,,,,,,,,,,,,,,
+203,,,,,,,,reduce compare -> shift,,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,,,shift 340,shift 341,shift 342,shift 343,,,,,,,,,,,,,,,,,,,
+204,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+205,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+206,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,344,48,49,50,51,52
+207,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+208,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,,,,,,,,345,,,,,,,
+209,,,,,,,,reduce equal -> compare != compare,,,,,,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,,,,,,,,,,,,,,,,,,,,,,,,,
+210,,,,shift 346,shift 347,,,reduce shift -> E,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,shift 348,shift 349,,,,,,,,,,,,,,,,,
+211,,,shift 350,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,reduce E -> A,reduce E -> A,shift 351,shift 352,,,,,,,,,,,,,,,
+212,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+213,,,,,,,,reduce compare -> shift > shift,,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,
+214,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+215,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+216,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,353,48,49,50,51,52
+217,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+218,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,,,,,,,,354,,,,,,,
+219,,,,,,,,reduce compare -> shift >= shift,,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,
+220,,,,,,,,reduce compare -> shift < shift,,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,
+221,,,,,,,,reduce compare -> shift <= shift,,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,
+222,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+223,,,shift 134,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 135,shift 136,,,,,,,,,,,,,,,
+224,,,shift 134,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 135,shift 136,,,,,,,,,,,,,,,
+225,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+226,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+227,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+228,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+229,,,shift 143,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 144,shift 145,,,,,,,,,,,,,,,
+230,,,shift 143,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 144,shift 145,,,,,,,,,,,,,,,
+231,,,,shift 355,shift 356,,,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+232,,,shift 357,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 358,shift 359,,,,,,,,,,,,,,,
+233,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+234,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+235,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+236,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,360,48,49,50,51,52
+237,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+238,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,,,,,,,,361,,,,,,,
+239,,,,shift 355,shift 356,,,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+240,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+241,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+242,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+243,,,,shift 362,shift 363,,,,reduce shift -> E,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 364,shift 365,,,,,,,,,,,,,,,,,
+244,,,shift 366,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 367,shift 368,,,,,,,,,,,,,,,
+245,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+246,,,,,,,,,reduce T -> L_1 ? L_1 : L_1,,,,,,,shift 369,shift 370,,,,,,,,,,,,,,,,,,,,,,,,,
+247,,,,,,,,,reduce L_1 -> L_2,,,,,shift 371,shift 372,reduce L_1 -> L_2,reduce L_1 -> L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+248,,,,,,,,,reduce L_2 -> equal,,,,,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,reduce L_2 -> equal,,,,,,,,,,,,,,,,,,,,,,,,,
+249,,,,,,,,,reduce equal -> compare,,,,,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,reduce equal -> compare,shift 373,shift 374,,,,,,,,,,,,,,,,,,,,,,,
+250,,,,,,,,,reduce compare -> shift,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,shift 375,shift 376,shift 377,shift 378,,,,,,,,,,,,,,,,,,,
+251,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+252,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+253,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,379,48,49,50,51,52
+254,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+255,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,,,,,,,,380,,,,,,,
+256,,,,,,,,,,,,,reduce L_1 -> L_1 and L_2,shift 149,shift 150,reduce L_1 -> L_1 and L_2,reduce L_1 -> L_1 and L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+257,,,,,,,,,,,,,reduce L_1 -> L_1 or L_2,shift 149,shift 150,reduce L_1 -> L_1 or L_2,reduce L_1 -> L_1 or L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+258,,,,,,,,,,,,,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,,,,,,,,,,,,,,,,,,,,,,,,,
+259,,,,,,,,,,,,,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,,,,,,,,,,,,,,,,,,,,,,,,,
+260,,,,shift 381,shift 382,,,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 383,shift 384,,,,,,,,,,,,,,,,,
+261,,,shift 385,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 386,shift 387,,,,,,,,,,,,,,,
+262,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+263,,,,,,,,,,,,,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,,,,,,,,,,,,,,,,,,,,,,,,,
+264,,,,,,,,,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,,,shift 388,shift 389,shift 390,shift 391,,,,,,,,,,,,,,,,,,,
+265,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+266,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+267,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,392,48,49,50,51,52
+268,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+269,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,,,,,,,,393,,,,,,,
+270,,,,,,,,,,,,,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,,,,,,,,,,,,,,,,,,,,,,,,,
+271,,,,shift 394,shift 395,,,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,shift 396,shift 397,,,,,,,,,,,,,,,,,
+272,,,shift 398,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,reduce E -> A,reduce E -> A,shift 399,shift 400,,,,,,,,,,,,,,,
+273,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+274,,,,,,,,,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,
+275,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+276,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+277,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,401,48,49,50,51,52
+278,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+279,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,,,,,,,,402,,,,,,,
+280,,,,,,,,,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,
+281,,,,,,,,,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,
+282,,,,,,,,,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,
+283,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+284,,,shift 163,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 164,shift 165,,,,,,,,,,,,,,,
+285,,,shift 163,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 164,shift 165,,,,,,,,,,,,,,,
+286,,,,shift 403,shift 404,,,,reduce shift -> E << E,,,reduce shift -> E << E,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+287,,,shift 405,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 406,shift 407,,,,,,,,,,,,,,,
+288,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+289,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+290,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+291,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,408,48,49,50,51,52
+292,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+293,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,,,,,,,,409,,,,,,,
+294,,,,shift 403,shift 404,,,,reduce shift -> E >> E,,,reduce shift -> E >> E,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+295,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+296,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+297,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+298,,,,shift 410,shift 411,,,,reduce shift -> E,,,reduce shift -> E,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,,,shift 412,shift 413,,,,,,,,,,,,,,,,,
+299,,,shift 414,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,reduce E -> A,reduce E -> A,shift 415,shift 416,,,,,,,,,,,,,,,
+300,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+301,,,,,,,,,reduce compare -> shift > shift,,,reduce compare -> shift > shift,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,,,
+302,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+303,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+304,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,417,48,49,50,51,52
+305,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+306,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,,,,,,,,418,,,,,,,
+307,,,,,,,,,reduce compare -> shift >= shift,,,reduce compare -> shift >= shift,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+308,,,,,,,,,reduce compare -> shift < shift,,,reduce compare -> shift < shift,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,,,
+309,,,,,,,,,reduce compare -> shift <= shift,,,reduce compare -> shift <= shift,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+310,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+311,,,shift 176,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,shift 177,shift 178,,,,,,,,,,,,,,,
+312,,,shift 176,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,shift 177,shift 178,,,,,,,,,,,,,,,
+313,,,,shift 419,shift 420,,,,reduce shift -> E << E,,,reduce shift -> E << E,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,
+314,,,shift 421,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,shift 422,shift 423,,,,,,,,,,,,,,,
+315,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+316,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+317,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+318,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,424,48,49,50,51,52
+319,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+320,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,,,,,,,,425,,,,,,,
+321,,,,shift 419,shift 420,,,,reduce shift -> E >> E,,,reduce shift -> E >> E,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,
+322,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+323,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+324,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+325,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+326,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,,,,,426,185,,,,,,,186
+327,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,,,,,427,185,,,,,,,186
+328,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,,,,,,185,,,,,,,428
+329,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,,,,,,185,,,,,,,429
+330,shift 187,,,,,,shift 188,,,shift 189,,,,,,,,,,,,,,,,,,shift 190,,,,,,,185,,,,,,,430
+331,,,,,,,,shift 431,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+332,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+333,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,,,,,432,201,,,,,,,204
+334,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,,,,,433,201,,,,,,,204
+335,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,434,,,,435,436,,,,,,,437
+336,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,442,,,,435,436,,,,,,,437
+337,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,,,,,,201,,,,,,,443
+338,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,,,,,,201,,,,,,,444
+339,shift 205,,,,,,shift 206,,,shift 207,,,,,,,,,,,,,,,,,,shift 208,,,,,,,201,,,,,,,445
+340,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,446,,,,447,448,,,,,,449,450
+341,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,446,,,,447,448,,,,,,455,450
+342,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,446,,,,447,448,,,,,,456,450
+343,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,446,,,,447,448,,,,,,457,450
+344,,,,,,,,shift 458,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+345,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+346,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,,,,,459,212,,,,,,,214
+347,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,,,,,460,212,,,,,,,214
+348,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,461,,,,462,463,,,,,,,464
+349,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,469,,,,462,463,,,,,,,464
+350,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,,,,,,212,,,,,,,470
+351,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,,,,,,212,,,,,,,471
+352,shift 215,,,,,,shift 216,,,shift 217,,,,,,,,,,,,,,,,,,shift 218,,,,,,,212,,,,,,,472
+353,,,,,,,,shift 473,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+354,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+355,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,,,,,474,233,,,,,,,234
+356,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,,,,,475,233,,,,,,,234
+357,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,,,,,,233,,,,,,,476
+358,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,,,,,,233,,,,,,,477
+359,shift 235,,,,,,shift 236,,,shift 237,,,,,,,,,,,,,,,,,,shift 238,,,,,,,233,,,,,,,478
+360,,,,,,,,shift 479,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+361,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+362,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,,,,,480,245,,,,,,,251
+363,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,,,,,481,245,,,,,,,251
+364,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,482,,,,483,484,,,,,,,485
+365,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,490,,,,483,484,,,,,,,485
+366,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,,,,,,245,,,,,,,491
+367,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,,,,,,245,,,,,,,492
+368,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,,,,,,245,,,,,,,493
+369,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,243,,,,244,245,,,494,248,249,250,251
+370,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,243,,,,244,245,,,495,248,249,250,251
+371,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,243,,,,244,245,,,,496,249,250,251
+372,shift 252,,,,,,shift 253,,,shift 254,,,,,,,,,,,,,,,,,,shift 255,,243,,,,244,245,,,,497,249,250,251
+373,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,498,,,,499,500,,,,,501,502,503
+374,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,498,,,,499,500,,,,,508,502,503
+375,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,509,,,,510,511,,,,,,512,513
+376,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,509,,,,510,511,,,,,,518,513
+377,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,509,,,,510,511,,,,,,519,513
+378,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,509,,,,510,511,,,,,,520,513
+379,,,,,,,,shift 521,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+380,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+381,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,,,,,522,262,,,,,,,265
+382,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,,,,,523,262,,,,,,,265
+383,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,524,,,,525,526,,,,,,,527
+384,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,532,,,,525,526,,,,,,,527
+385,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,,,,,,262,,,,,,,533
+386,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,,,,,,262,,,,,,,534
+387,shift 266,,,,,,shift 267,,,shift 268,,,,,,,,,,,,,,,,,,shift 269,,,,,,,262,,,,,,,535
+388,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,536,,,,537,538,,,,,,539,540
+389,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,536,,,,537,538,,,,,,545,540
+390,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,536,,,,537,538,,,,,,546,540
+391,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,536,,,,537,538,,,,,,547,540
+392,,,,,,,,shift 548,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+393,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+394,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,,,,,549,273,,,,,,,275
+395,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,,,,,550,273,,,,,,,275
+396,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,551,,,,552,553,,,,,,,554
+397,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,559,,,,552,553,,,,,,,554
+398,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,,,,,,273,,,,,,,560
+399,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,,,,,,273,,,,,,,561
+400,shift 276,,,,,,shift 277,,,shift 278,,,,,,,,,,,,,,,,,,shift 279,,,,,,,273,,,,,,,562
+401,,,,,,,,shift 563,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+402,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+403,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,,,,,564,288,,,,,,,289
+404,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,,,,,565,288,,,,,,,289
+405,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,,,,,,288,,,,,,,566
+406,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,,,,,,288,,,,,,,567
+407,shift 290,,,,,,shift 291,,,shift 292,,,,,,,,,,,,,,,,,,shift 293,,,,,,,288,,,,,,,568
+408,,,,,,,,shift 569,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+409,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+410,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,,,,,570,300,,,,,,,302
+411,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,,,,,571,300,,,,,,,302
+412,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,572,,,,573,574,,,,,,,575
+413,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,580,,,,573,574,,,,,,,575
+414,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,,,,,,300,,,,,,,581
+415,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,,,,,,300,,,,,,,582
+416,shift 303,,,,,,shift 304,,,shift 305,,,,,,,,,,,,,,,,,,shift 306,,,,,,,300,,,,,,,583
+417,,,,,,,,shift 584,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+418,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+419,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,,,,,585,315,,,,,,,316
+420,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,,,,,586,315,,,,,,,316
+421,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,,,,,,315,,,,,,,587
+422,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,,,,,,315,,,,,,,588
+423,shift 317,,,,,,shift 318,,,shift 319,,,,,,,,,,,,,,,,,,shift 320,,,,,,,315,,,,,,,589
+424,,,,,,,,shift 590,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+425,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+426,,,shift 328,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 329,shift 330,,,,,,,,,,,,,,,
+427,,,shift 328,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 329,shift 330,,,,,,,,,,,,,,,
+428,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+429,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+430,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+431,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+432,,,shift 337,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 338,shift 339,,,,,,,,,,,,,,,
+433,,,shift 337,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 338,shift 339,,,,,,,,,,,,,,,
+434,,,,shift 591,shift 592,,,reduce shift -> E << E,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+435,,,shift 593,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 594,shift 595,,,,,,,,,,,,,,,
+436,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+437,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+438,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+439,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,596,48,49,50,51,52
+440,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+441,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,,,,,,,,597,,,,,,,
+442,,,,shift 591,shift 592,,,reduce shift -> E >> E,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+443,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+444,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+445,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+446,,,,shift 598,shift 599,,,reduce shift -> E,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,,,shift 600,shift 601,,,,,,,,,,,,,,,,,
+447,,,shift 602,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,reduce E -> A,reduce E -> A,shift 603,shift 604,,,,,,,,,,,,,,,
+448,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+449,,,,,,,,reduce compare -> shift > shift,,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,,,
+450,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+451,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+452,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,605,48,49,50,51,52
+453,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+454,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,,,,,,,,606,,,,,,,
+455,,,,,,,,reduce compare -> shift >= shift,,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+456,,,,,,,,reduce compare -> shift < shift,,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,,,
+457,,,,,,,,reduce compare -> shift <= shift,,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+458,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+459,,,shift 350,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,shift 351,shift 352,,,,,,,,,,,,,,,
+460,,,shift 350,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,shift 351,shift 352,,,,,,,,,,,,,,,
+461,,,,shift 607,shift 608,,,reduce shift -> E << E,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,
+462,,,shift 609,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,shift 610,shift 611,,,,,,,,,,,,,,,
+463,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+464,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+465,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+466,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,612,48,49,50,51,52
+467,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+468,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,,,,,,,,613,,,,,,,
+469,,,,shift 607,shift 608,,,reduce shift -> E >> E,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,
+470,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+471,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+472,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+473,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+474,,,shift 357,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 358,shift 359,,,,,,,,,,,,,,,
+475,,,shift 357,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 358,shift 359,,,,,,,,,,,,,,,
+476,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+477,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+478,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+479,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+480,,,shift 366,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 367,shift 368,,,,,,,,,,,,,,,
+481,,,shift 366,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 367,shift 368,,,,,,,,,,,,,,,
+482,,,,shift 614,shift 615,,,,reduce shift -> E << E,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+483,,,shift 616,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 617,shift 618,,,,,,,,,,,,,,,
+484,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+485,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+486,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+487,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,619,48,49,50,51,52
+488,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+489,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,,,,,,,,620,,,,,,,
+490,,,,shift 614,shift 615,,,,reduce shift -> E >> E,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+491,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+492,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+493,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+494,,,,,,,,,reduce L_1 -> L_1 and L_2,,,,,shift 371,shift 372,reduce L_1 -> L_1 and L_2,reduce L_1 -> L_1 and L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+495,,,,,,,,,reduce L_1 -> L_1 or L_2,,,,,shift 371,shift 372,reduce L_1 -> L_1 or L_2,reduce L_1 -> L_1 or L_2,,,,,,,,,,,,,,,,,,,,,,,,,
+496,,,,,,,,,reduce L_2 -> L_2 & equal,,,,,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,reduce L_2 -> L_2 & equal,,,,,,,,,,,,,,,,,,,,,,,,,
+497,,,,,,,,,reduce L_2 -> L_2 ^ equal,,,,,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,reduce L_2 -> L_2 ^ equal,,,,,,,,,,,,,,,,,,,,,,,,,
+498,,,,shift 621,shift 622,,,,reduce shift -> E,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,shift 623,shift 624,,,,,,,,,,,,,,,,,
+499,,,shift 625,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,shift 626,shift 627,,,,,,,,,,,,,,,
+500,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+501,,,,,,,,,reduce equal -> compare == compare,,,,,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,reduce equal -> compare == compare,,,,,,,,,,,,,,,,,,,,,,,,,
+502,,,,,,,,,reduce compare -> shift,,,,,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,reduce compare -> shift,,,shift 628,shift 629,shift 630,shift 631,,,,,,,,,,,,,,,,,,,
+503,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+504,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+505,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,632,48,49,50,51,52
+506,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+507,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,,,,,,,,633,,,,,,,
+508,,,,,,,,,reduce equal -> compare != compare,,,,,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,reduce equal -> compare != compare,,,,,,,,,,,,,,,,,,,,,,,,,
+509,,,,shift 634,shift 635,,,,reduce shift -> E,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,shift 636,shift 637,,,,,,,,,,,,,,,,,
+510,,,shift 638,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,reduce E -> A,reduce E -> A,shift 639,shift 640,,,,,,,,,,,,,,,
+511,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+512,,,,,,,,,reduce compare -> shift > shift,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,
+513,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+514,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+515,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,641,48,49,50,51,52
+516,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+517,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,,,,,,,,642,,,,,,,
+518,,,,,,,,,reduce compare -> shift >= shift,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,
+519,,,,,,,,,reduce compare -> shift < shift,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,
+520,,,,,,,,,reduce compare -> shift <= shift,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,
+521,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+522,,,shift 385,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 386,shift 387,,,,,,,,,,,,,,,
+523,,,shift 385,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 386,shift 387,,,,,,,,,,,,,,,
+524,,,,shift 643,shift 644,,,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+525,,,shift 645,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 646,shift 647,,,,,,,,,,,,,,,
+526,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+527,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+528,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+529,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,648,48,49,50,51,52
+530,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+531,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,,,,,,,,649,,,,,,,
+532,,,,shift 643,shift 644,,,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+533,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+534,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+535,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+536,,,,shift 650,shift 651,,,,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,,,shift 652,shift 653,,,,,,,,,,,,,,,,,
+537,,,shift 654,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,reduce E -> A,reduce E -> A,shift 655,shift 656,,,,,,,,,,,,,,,
+538,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+539,,,,,,,,,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,,,
+540,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+541,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+542,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,657,48,49,50,51,52
+543,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+544,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,,,,,,,,658,,,,,,,
+545,,,,,,,,,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+546,,,,,,,,,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,,,
+547,,,,,,,,,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+548,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+549,,,shift 398,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,shift 399,shift 400,,,,,,,,,,,,,,,
+550,,,shift 398,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,shift 399,shift 400,,,,,,,,,,,,,,,
+551,,,,shift 659,shift 660,,,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,
+552,,,shift 661,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,shift 662,shift 663,,,,,,,,,,,,,,,
+553,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+554,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+555,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+556,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,664,48,49,50,51,52
+557,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+558,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,,,,,,,,665,,,,,,,
+559,,,,shift 659,shift 660,,,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,
+560,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+561,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+562,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+563,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+564,,,shift 405,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 406,shift 407,,,,,,,,,,,,,,,
+565,,,shift 405,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 406,shift 407,,,,,,,,,,,,,,,
+566,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+567,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+568,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+569,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+570,,,shift 414,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,reduce E -> E + A,reduce E -> E + A,shift 415,shift 416,,,,,,,,,,,,,,,
+571,,,shift 414,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,reduce E -> E - A,reduce E -> E - A,shift 415,shift 416,,,,,,,,,,,,,,,
+572,,,,shift 666,shift 667,,,,reduce shift -> E << E,,,reduce shift -> E << E,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,,,
+573,,,shift 668,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,reduce E -> A,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,,,shift 669,shift 670,,,,,,,,,,,,,,,
+574,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,reduce not -> B,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+575,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,reduce A -> not,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+576,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,reduce B -> id,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+577,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,671,48,49,50,51,52
+578,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,reduce B -> IntConst,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+579,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,,,,,,,,672,,,,,,,
+580,,,,shift 666,shift 667,,,,reduce shift -> E >> E,,,reduce shift -> E >> E,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,,,
+581,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+582,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+583,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+584,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+585,,,shift 421,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,shift 422,shift 423,,,,,,,,,,,,,,,
+586,,,shift 421,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,shift 422,shift 423,,,,,,,,,,,,,,,
+587,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+588,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+589,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+590,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+591,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,,,,,673,436,,,,,,,437
+592,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,,,,,674,436,,,,,,,437
+593,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,,,,,,436,,,,,,,675
+594,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,,,,,,436,,,,,,,676
+595,shift 438,,,,,,shift 439,,,shift 440,,,,,,,,,,,,,,,,,,shift 441,,,,,,,436,,,,,,,677
+596,,,,,,,,shift 678,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+597,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+598,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,,,,,679,448,,,,,,,450
+599,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,,,,,680,448,,,,,,,450
+600,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,681,,,,682,683,,,,,,,684
+601,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,689,,,,682,683,,,,,,,684
+602,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,,,,,,448,,,,,,,690
+603,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,,,,,,448,,,,,,,691
+604,shift 451,,,,,,shift 452,,,shift 453,,,,,,,,,,,,,,,,,,shift 454,,,,,,,448,,,,,,,692
+605,,,,,,,,shift 693,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+606,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+607,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,,,,,694,463,,,,,,,464
+608,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,,,,,695,463,,,,,,,464
+609,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,,,,,,463,,,,,,,696
+610,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,,,,,,463,,,,,,,697
+611,shift 465,,,,,,shift 466,,,shift 467,,,,,,,,,,,,,,,,,,shift 468,,,,,,,463,,,,,,,698
+612,,,,,,,,shift 699,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+613,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+614,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,,,,,700,484,,,,,,,485
+615,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,,,,,701,484,,,,,,,485
+616,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,,,,,,484,,,,,,,702
+617,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,,,,,,484,,,,,,,703
+618,shift 486,,,,,,shift 487,,,shift 488,,,,,,,,,,,,,,,,,,shift 489,,,,,,,484,,,,,,,704
+619,,,,,,,,shift 705,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+620,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+621,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,,,,,706,500,,,,,,,503
+622,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,,,,,707,500,,,,,,,503
+623,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,708,,,,709,710,,,,,,,711
+624,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,716,,,,709,710,,,,,,,711
+625,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,,,,,,500,,,,,,,717
+626,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,,,,,,500,,,,,,,718
+627,shift 504,,,,,,shift 505,,,shift 506,,,,,,,,,,,,,,,,,,shift 507,,,,,,,500,,,,,,,719
+628,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,720,,,,721,722,,,,,,723,724
+629,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,720,,,,721,722,,,,,,729,724
+630,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,720,,,,721,722,,,,,,730,724
+631,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,720,,,,721,722,,,,,,731,724
+632,,,,,,,,shift 732,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+633,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+634,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,,,,,733,511,,,,,,,513
+635,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,,,,,734,511,,,,,,,513
+636,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,735,,,,736,737,,,,,,,738
+637,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,743,,,,736,737,,,,,,,738
+638,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,,,,,,511,,,,,,,744
+639,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,,,,,,511,,,,,,,745
+640,shift 514,,,,,,shift 515,,,shift 516,,,,,,,,,,,,,,,,,,shift 517,,,,,,,511,,,,,,,746
+641,,,,,,,,shift 747,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+642,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+643,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,,,,,748,526,,,,,,,527
+644,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,,,,,749,526,,,,,,,527
+645,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,,,,,,526,,,,,,,750
+646,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,,,,,,526,,,,,,,751
+647,shift 528,,,,,,shift 529,,,shift 530,,,,,,,,,,,,,,,,,,shift 531,,,,,,,526,,,,,,,752
+648,,,,,,,,shift 753,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+649,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+650,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,,,,,754,538,,,,,,,540
+651,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,,,,,755,538,,,,,,,540
+652,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,756,,,,757,758,,,,,,,759
+653,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,764,,,,757,758,,,,,,,759
+654,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,,,,,,538,,,,,,,765
+655,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,,,,,,538,,,,,,,766
+656,shift 541,,,,,,shift 542,,,shift 543,,,,,,,,,,,,,,,,,,shift 544,,,,,,,538,,,,,,,767
+657,,,,,,,,shift 768,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+658,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+659,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,,,,,769,553,,,,,,,554
+660,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,,,,,770,553,,,,,,,554
+661,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,,,,,,553,,,,,,,771
+662,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,,,,,,553,,,,,,,772
+663,shift 555,,,,,,shift 556,,,shift 557,,,,,,,,,,,,,,,,,,shift 558,,,,,,,553,,,,,,,773
+664,,,,,,,,shift 774,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+665,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+666,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,,,,,775,574,,,,,,,575
+667,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,,,,,776,574,,,,,,,575
+668,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,,,,,,574,,,,,,,777
+669,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,,,,,,574,,,,,,,778
+670,shift 576,,,,,,shift 577,,,shift 578,,,,,,,,,,,,,,,,,,shift 579,,,,,,,574,,,,,,,779
+671,,,,,,,,shift 780,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+672,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,reduce not -> ! B,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+673,,,shift 593,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 594,shift 595,,,,,,,,,,,,,,,
+674,,,shift 593,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 594,shift 595,,,,,,,,,,,,,,,
+675,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+676,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+677,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+678,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+679,,,shift 602,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,reduce E -> E + A,reduce E -> E + A,shift 603,shift 604,,,,,,,,,,,,,,,
+680,,,shift 602,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,reduce E -> E - A,reduce E -> E - A,shift 603,shift 604,,,,,,,,,,,,,,,
+681,,,,shift 781,shift 782,,,reduce shift -> E << E,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,,,
+682,,,shift 783,reduce E -> A,reduce E -> A,,,reduce E -> A,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,,,shift 784,shift 785,,,,,,,,,,,,,,,
+683,,,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+684,,,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+685,,,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+686,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,786,48,49,50,51,52
+687,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+688,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,,,,,,,,787,,,,,,,
+689,,,,shift 781,shift 782,,,reduce shift -> E >> E,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,,,
+690,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+691,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+692,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+693,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+694,,,shift 609,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,shift 610,shift 611,,,,,,,,,,,,,,,
+695,,,shift 609,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,shift 610,shift 611,,,,,,,,,,,,,,,
+696,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+697,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+698,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+699,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+700,,,shift 616,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 617,shift 618,,,,,,,,,,,,,,,
+701,,,shift 616,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 617,shift 618,,,,,,,,,,,,,,,
+702,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+703,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+704,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+705,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+706,,,shift 625,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,shift 626,shift 627,,,,,,,,,,,,,,,
+707,,,shift 625,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,shift 626,shift 627,,,,,,,,,,,,,,,
+708,,,,shift 788,shift 789,,,,reduce shift -> E << E,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,
+709,,,shift 790,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,shift 791,shift 792,,,,,,,,,,,,,,,
+710,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+711,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+712,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+713,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,793,48,49,50,51,52
+714,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+715,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,,,,,,,,794,,,,,,,
+716,,,,shift 788,shift 789,,,,reduce shift -> E >> E,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,
+717,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+718,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+719,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+720,,,,shift 795,shift 796,,,,reduce shift -> E,,,,,reduce shift -> E,reduce shift -> E,reduce shift -> E,reduce shift -> E,,,,,,,shift 797,shift 798,,,,,,,,,,,,,,,,,
+721,,,shift 799,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,reduce E -> A,reduce E -> A,shift 800,shift 801,,,,,,,,,,,,,,,
+722,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+723,,,,,,,,,reduce compare -> shift > shift,,,,,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,reduce compare -> shift > shift,,,,,,,,,,,,,,,,,,,,,,,,,
+724,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+725,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+726,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,802,48,49,50,51,52
+727,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+728,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,,,,,,,,803,,,,,,,
+729,,,,,,,,,reduce compare -> shift >= shift,,,,,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,reduce compare -> shift >= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+730,,,,,,,,,reduce compare -> shift < shift,,,,,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,reduce compare -> shift < shift,,,,,,,,,,,,,,,,,,,,,,,,,
+731,,,,,,,,,reduce compare -> shift <= shift,,,,,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,reduce compare -> shift <= shift,,,,,,,,,,,,,,,,,,,,,,,,,
+732,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+733,,,shift 638,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,shift 639,shift 640,,,,,,,,,,,,,,,
+734,,,shift 638,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,shift 639,shift 640,,,,,,,,,,,,,,,
+735,,,,shift 804,shift 805,,,,reduce shift -> E << E,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,
+736,,,shift 806,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,shift 807,shift 808,,,,,,,,,,,,,,,
+737,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+738,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+739,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+740,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,809,48,49,50,51,52
+741,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+742,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,,,,,,,,810,,,,,,,
+743,,,,shift 804,shift 805,,,,reduce shift -> E >> E,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,
+744,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+745,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+746,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+747,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+748,,,shift 645,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 646,shift 647,,,,,,,,,,,,,,,
+749,,,shift 645,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 646,shift 647,,,,,,,,,,,,,,,
+750,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+751,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+752,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+753,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+754,,,shift 654,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,reduce E -> E + A,reduce E -> E + A,shift 655,shift 656,,,,,,,,,,,,,,,
+755,,,shift 654,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,reduce E -> E - A,reduce E -> E - A,shift 655,shift 656,,,,,,,,,,,,,,,
+756,,,,shift 811,shift 812,,,,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,,,
+757,,,shift 813,reduce E -> A,reduce E -> A,,,,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,,,shift 814,shift 815,,,,,,,,,,,,,,,
+758,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+759,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+760,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+761,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,816,48,49,50,51,52
+762,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+763,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,,,,,,,,817,,,,,,,
+764,,,,shift 811,shift 812,,,,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,,,
+765,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+766,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+767,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+768,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+769,,,shift 661,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,shift 662,shift 663,,,,,,,,,,,,,,,
+770,,,shift 661,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,shift 662,shift 663,,,,,,,,,,,,,,,
+771,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+772,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+773,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+774,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+775,,,shift 668,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,reduce E -> E + A,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,,,shift 669,shift 670,,,,,,,,,,,,,,,
+776,,,shift 668,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,reduce E -> E - A,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,,,shift 669,shift 670,,,,,,,,,,,,,,,
+777,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,reduce A -> A * not,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+778,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,reduce A -> A / not,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+779,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,reduce A -> A % not,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+780,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+781,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,,,,,818,683,,,,,,,684
+782,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,,,,,819,683,,,,,,,684
+783,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,,,,,,683,,,,,,,820
+784,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,,,,,,683,,,,,,,821
+785,shift 685,,,,,,shift 686,,,shift 687,,,,,,,,,,,,,,,,,,shift 688,,,,,,,683,,,,,,,822
+786,,,,,,,,shift 823,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+787,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+788,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,,,,,824,710,,,,,,,711
+789,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,,,,,825,710,,,,,,,711
+790,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,,,,,,710,,,,,,,826
+791,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,,,,,,710,,,,,,,827
+792,shift 712,,,,,,shift 713,,,shift 714,,,,,,,,,,,,,,,,,,shift 715,,,,,,,710,,,,,,,828
+793,,,,,,,,shift 829,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+794,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+795,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,,,,,830,722,,,,,,,724
+796,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,,,,,831,722,,,,,,,724
+797,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,832,,,,833,834,,,,,,,835
+798,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,840,,,,833,834,,,,,,,835
+799,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,,,,,,722,,,,,,,841
+800,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,,,,,,722,,,,,,,842
+801,shift 725,,,,,,shift 726,,,shift 727,,,,,,,,,,,,,,,,,,shift 728,,,,,,,722,,,,,,,843
+802,,,,,,,,shift 844,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+803,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+804,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,,,,,845,737,,,,,,,738
+805,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,,,,,846,737,,,,,,,738
+806,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,,,,,,737,,,,,,,847
+807,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,,,,,,737,,,,,,,848
+808,shift 739,,,,,,shift 740,,,shift 741,,,,,,,,,,,,,,,,,,shift 742,,,,,,,737,,,,,,,849
+809,,,,,,,,shift 850,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+810,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+811,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,,,,,851,758,,,,,,,759
+812,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,,,,,852,758,,,,,,,759
+813,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,,,,,,758,,,,,,,853
+814,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,,,,,,758,,,,,,,854
+815,shift 760,,,,,,shift 761,,,shift 762,,,,,,,,,,,,,,,,,,shift 763,,,,,,,758,,,,,,,855
+816,,,,,,,,shift 856,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+817,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+818,,,shift 783,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,,,shift 784,shift 785,,,,,,,,,,,,,,,
+819,,,shift 783,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,,,shift 784,shift 785,,,,,,,,,,,,,,,
+820,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+821,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+822,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+823,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+824,,,shift 790,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,shift 791,shift 792,,,,,,,,,,,,,,,
+825,,,shift 790,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,shift 791,shift 792,,,,,,,,,,,,,,,
+826,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+827,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+828,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+829,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+830,,,shift 799,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,reduce E -> E + A,reduce E -> E + A,shift 800,shift 801,,,,,,,,,,,,,,,
+831,,,shift 799,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,reduce E -> E - A,reduce E -> E - A,shift 800,shift 801,,,,,,,,,,,,,,,
+832,,,,shift 857,shift 858,,,,reduce shift -> E << E,,,,,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,reduce shift -> E << E,,,,,,,,,,,,,,,,,,,,,,,,,
+833,,,shift 859,reduce E -> A,reduce E -> A,,,,reduce E -> A,,,,,reduce E -> A,reduce E -> A,reduce E -> A,reduce E -> A,,,,,,,,,shift 860,shift 861,,,,,,,,,,,,,,,
+834,,,reduce not -> B,reduce not -> B,reduce not -> B,,,,reduce not -> B,,,,,reduce not -> B,reduce not -> B,reduce not -> B,reduce not -> B,,,,,,,,,reduce not -> B,reduce not -> B,,,,,,,,,,,,,,,
+835,,,reduce A -> not,reduce A -> not,reduce A -> not,,,,reduce A -> not,,,,,reduce A -> not,reduce A -> not,reduce A -> not,reduce A -> not,,,,,,,,,reduce A -> not,reduce A -> not,,,,,,,,,,,,,,,
+836,,,reduce B -> id,reduce B -> id,reduce B -> id,,,,reduce B -> id,,,,,reduce B -> id,reduce B -> id,reduce B -> id,reduce B -> id,,,,,,,,,reduce B -> id,reduce B -> id,,,,,,,,,,,,,,,
+837,shift 53,,,,,,shift 54,,,shift 55,,,,,,,,,,,,,,,,,,shift 56,,44,,,,45,46,,862,48,49,50,51,52
+838,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,reduce B -> IntConst,,,,,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,reduce B -> IntConst,reduce B -> IntConst,,,,,,,,,,,,,,,
+839,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,,,,,,,,863,,,,,,,
+840,,,,shift 857,shift 858,,,,reduce shift -> E >> E,,,,,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,reduce shift -> E >> E,,,,,,,,,,,,,,,,,,,,,,,,,
+841,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+842,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+843,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+844,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+845,,,shift 806,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,shift 807,shift 808,,,,,,,,,,,,,,,
+846,,,shift 806,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,shift 807,shift 808,,,,,,,,,,,,,,,
+847,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+848,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+849,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+850,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+851,,,shift 813,reduce E -> E + A,reduce E -> E + A,,,,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,,,shift 814,shift 815,,,,,,,,,,,,,,,
+852,,,shift 813,reduce E -> E - A,reduce E -> E - A,,,,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,,,shift 814,shift 815,,,,,,,,,,,,,,,
+853,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+854,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+855,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+856,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,
+857,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,,,,,864,834,,,,,,,835
+858,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,,,,,865,834,,,,,,,835
+859,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,,,,,,834,,,,,,,866
+860,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,,,,,,834,,,,,,,867
+861,shift 836,,,,,,shift 837,,,shift 838,,,,,,,,,,,,,,,,,,shift 839,,,,,,,834,,,,,,,868
+862,,,,,,,,shift 869,,,,,,,,shift 120,shift 121,,,,,,,,,,,,,,,,,,,,,,,,,
+863,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,reduce not -> ! B,,,,,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,reduce not -> ! B,,,,,,,,,reduce not -> ! B,reduce not -> ! B,,,,,,,,,,,,,,,
+864,,,shift 859,reduce E -> E + A,reduce E -> E + A,,,,reduce E -> E + A,,,,,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,reduce E -> E + A,,,,,,,,,shift 860,shift 861,,,,,,,,,,,,,,,
+865,,,shift 859,reduce E -> E - A,reduce E -> E - A,,,,reduce E -> E - A,,,,,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,reduce E -> E - A,,,,,,,,,shift 860,shift 861,,,,,,,,,,,,,,,
+866,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,reduce A -> A * not,,,,,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,reduce A -> A * not,,,,,,,,,reduce A -> A * not,reduce A -> A * not,,,,,,,,,,,,,,,
+867,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,reduce A -> A / not,,,,,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,reduce A -> A / not,,,,,,,,,reduce A -> A / not,reduce A -> A / not,,,,,,,,,,,,,,,
+868,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,reduce A -> A % not,,,,,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,reduce A -> A % not,,,,,,,,,reduce A -> A % not,reduce A -> A % not,,,,,,,,,,,,,,,
+869,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,reduce B -> ( L_1 ),,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,reduce B -> ( L_1 ),reduce B -> ( L_1 ),,,,,,,,,,,,,,,

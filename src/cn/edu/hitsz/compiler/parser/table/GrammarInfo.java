@@ -24,7 +24,6 @@ public class GrammarInfo {
     private GrammarInfo() {
         final var lines = FileUtils.readLines(FilePathConfig.GRAMMAR_PATH);
         for (int idx = 0; idx < lines.size(); idx++) {
-            System.out.println(idx);
             final var line = lines.get(idx);
             // 形如 `A -> B ( id intConst ) C;` 的产生式
             // 先删除分号, 按 -> 切, 再按空格切 body
