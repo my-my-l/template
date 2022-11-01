@@ -8,6 +8,7 @@ import cn.edu.hitsz.compiler.parser.ProductionCollector;
 import cn.edu.hitsz.compiler.parser.SemanticAnalyzer;
 import cn.edu.hitsz.compiler.parser.SyntaxAnalyzer;
 import cn.edu.hitsz.compiler.parser.table.GrammarInfo;
+import cn.edu.hitsz.compiler.parser.table.Symbol;
 import cn.edu.hitsz.compiler.parser.table.TableLoader;
 import cn.edu.hitsz.compiler.symtab.SymbolTable;
 import cn.edu.hitsz.compiler.utils.FilePathConfig;
@@ -37,7 +38,7 @@ public class Test {
         for(int a:deque){
             System.out.println(a);
         }
-        deque.pop();
+        int test = deque.pop();
         for(int a:deque){
             System.out.println(a);
         }
@@ -45,16 +46,7 @@ public class Test {
         for(int a:deque){
             System.out.println(a);
         }
-       /* List<Character> characters =new ArrayList<>();
-        FileReader fileReader = new FileReader("data/in/input_code.txt");
-        int ch;
-        ch = fileReader.read();
-        while(ch!=-1){
-            characters.add((char)ch);
-            //System.out.println((char)ch);
-            ch = fileReader.read();
-        }
-       System.out.println(characters.get(11)=='\r');*/
+        System.out.println(test);
 
     }
 }

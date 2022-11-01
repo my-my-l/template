@@ -36,7 +36,6 @@ public class SymbolTableEntry {
         if (this.type != null) {
             throw new RuntimeException("Can NOT set type for an entry twice");
         }
-
         this.type = type;
     }
 

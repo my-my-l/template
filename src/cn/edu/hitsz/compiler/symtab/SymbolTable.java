@@ -27,7 +27,14 @@ public class SymbolTable {
     private Map<String, SymbolTableEntry> symbolTable = new HashMap<String, SymbolTableEntry>();
 
     public SymbolTableEntry get(String text) {
-        throw new NotImplementedException();
+        if(!has(text)){
+            System.out.println("无"+text);
+            for (String key : symbolTable.keySet()) {
+                System.out.println("key= "+ key );
+            }
+
+        }
+        return symbolTable.get(text);
     }
 
     /**

@@ -4,34 +4,70 @@ import cn.edu.hitsz.compiler.NotImplementedException;
 import cn.edu.hitsz.compiler.lexer.Token;
 import cn.edu.hitsz.compiler.parser.table.Production;
 import cn.edu.hitsz.compiler.parser.table.Status;
+import cn.edu.hitsz.compiler.parser.table.Symbol;
+import cn.edu.hitsz.compiler.symtab.SourceCodeType;
 import cn.edu.hitsz.compiler.symtab.SymbolTable;
+import cn.edu.hitsz.compiler.symtab.SymbolTableEntry;
 
-// TODO: 实验三: 实现语义分析
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Objects;
+
+import static cn.edu.hitsz.compiler.symtab.SourceCodeType.Int;
+
+// 实现语义分析
+
 public class SemanticAnalyzer implements ActionObserver {
+
+    private  SymbolTable symbolTable;
+    private Deque<Symbol> irStack = new LinkedList<>();
+    private String id;
 
     @Override
     public void whenAccept(Status currentStatus) {
-        // TODO: 该过程在遇到 Accept 时要采取的代码动作
-        //throw new NotImplementedException();
     }
 
     @Override
     public void whenReduce(Status currentStatus, Production production) {
-        // TODO: 该过程在遇到 reduce production 时要采取的代码动作
-        //throw new NotImplementedException();
+        switch (production.index()) {
+            case 1 -> {}
+            case 2 -> {}
+            case 3 -> {}
+            case 4 -> {
+                Token token = irStack.pop().getToken(); //id
+                SymbolTableEntry symbolTableEntry = symbolTable.get(token.getText());
+                symbolTableEntry.setType(irStack.pop().getType());
+            }
+            case 5 -> {}
+            case 6 -> {}
+            case 7 -> {}
+            case 8 -> {}
+            case 9 -> {}
+            case 10 -> {}
+            case 11 -> {}
+            case 12 -> {}
+            case 13 -> {}
+            case 14 -> {}
+            case 15 -> {}
+            default -> {
+                System.out.println(" production idex error");
+            }
+        }
     }
 
     @Override
     public void whenShift(Status currentStatus, Token currentToken) {
-        // TODO: 该过程在遇到 shift 时要采取的代码动作
-        //throw new NotImplementedException();
+        if (Objects.equals(currentToken.getKindId(), "int")) {
+            irStack.addFirst(new Symbol(Int));
+        } else {
+            irStack.addFirst(new Symbol(currentToken));
+
+        }
     }
 
     @Override
     public void setSymbolTable(SymbolTable table) {
-        // TODO: 设计你可能需要的符号表存储结构
-        // 如果需要使用符号表的话, 可以将它或者它的一部分信息存起来, 比如使用一个成员变量存储
-        //throw new NotImplementedException();
+        symbolTable = table;
     }
 }
 
